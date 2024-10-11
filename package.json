@@ -1,0 +1,44 @@
+{
+  "name": "@okou/action-yml",
+  "version": "0.0.0",
+  "description": "Define & Generate `action.yml` in TS, parse typed input with it.",
+  "author": "okou",
+  "license": "MIT",
+  "scripts": {
+    "check": "npm run format & npm run test",
+    "format": "biome check --write",
+    "test:run": "vitest run --typecheck",
+    "test:type": "tsc --noEmit",
+    "test": "npm run test:type & npm run test:run"
+  },
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./parser": "./src/parser.ts",
+    "./serializer": "./src/serializer.ts"
+  },
+  "files": [
+    "src"
+  ],
+  "keywords": [
+    "github",
+    "actions",
+    "github-actions",
+    "yaml",
+    "builder"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ookkoouu/action-yml"
+  },
+  "dependencies": {
+    "@actions/core": "1.11.1",
+    "yaml": "2.5.1"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.3",
+    "@types/node": "22.7.5",
+    "typescript": "5.6.3",
+    "vitest": "2.1.2"
+  }
+}
