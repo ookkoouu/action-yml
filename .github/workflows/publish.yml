@@ -1,13 +1,27 @@
-name: Publish Package
+name: Check Relese & Publish
 
 on:
-  workflow_dispatch:
   push:
-    tags:
-      - "v*"
+    branches:
+      - main
 
-jobs:
+jobs:      
+  release-please:
+    runs-on: ubuntu-latest
+    outputs:
+      do_publish: ${{ steps.release.outputs.release_created }}
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: googleapis/release-please-action@v4
+        id: release
+        with:
+          release-type: node
+
   publish:
+    if: ${{ needs.release-please.outputs.do_publish }}
+    needs: release-please
     runs-on: ubuntu-latest
     permissions:
       id-token: write
