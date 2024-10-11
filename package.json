@@ -1,6 +1,6 @@
 {
   "name": "@okou/action-yml",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Define & Generate `action.yml` in TS, parse typed input with it.",
   "author": "okou",
   "license": "MIT",
