@@ -1,7 +1,7 @@
 import { setOutput } from "@actions/core";
-import { kebabCase } from "./kebab";
-import type { ActionOutput as OutputYaml } from "./schema";
-import { type OutputSerializer, stringS } from "./serializer";
+import { kebabCase } from "./kebab.ts";
+import type { ActionOutput as OutputYaml } from "./schema.ts";
+import { type OutputSerializer, stringS } from "./serializer.ts";
 
 export interface ActionOutputOption<T> extends OutputYaml {
 	serializer?: OutputSerializer<T>;
@@ -26,7 +26,8 @@ export function parseOutput<T extends ActionOutput<never>>(
 	const res = new Proxy({} as any, {
 		set(target, key, newValue, _) {
 			if (typeof key !== "string") return false;
-			if (output[key].serializer !== undefined) {
+			if (!Object.keys(output).includes(key)) return true;
+			if (output[key]?.serializer !== undefined) {
 				setOutput(kebabCase(key), output[key].serializer(newValue as never));
 			} else {
 				setOutput(kebabCase(key), stringS(newValue));

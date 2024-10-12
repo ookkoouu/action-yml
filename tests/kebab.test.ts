@@ -1,5 +1,5 @@
 import { expect, test } from "vitest";
-import { kebabCase } from "../src/kebab";
+import { kebabCase } from "../src/kebab.ts";
 
 test("kebab-case", () => {
 	expect(kebabCase("foo")).toBe("foo");

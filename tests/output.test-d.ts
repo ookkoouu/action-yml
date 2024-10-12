@@ -1,6 +1,6 @@
 import { describe, expectTypeOf, test, vi } from "vitest";
-import { defineOutput, parseOutput } from "../src/output";
-import { arrayS, booleanS, numberS, stringS } from "../src/serializer";
+import { defineOutput, parseOutput } from "../src/output.ts";
+import { arrayS, booleanS, numberS, stringS } from "../src/serializer.ts";
 
 vi.mock("@actions/core");
 

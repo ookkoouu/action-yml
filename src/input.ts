@@ -1,7 +1,7 @@
 import { getInput } from "@actions/core";
-import { kebabCase } from "./kebab";
-import { type InputParser, stringP } from "./parser";
-import type { ActionInput as InputYaml } from "./schema";
+import { kebabCase } from "./kebab.ts";
+import { type InputParser, stringP } from "./parser.ts";
+import type { ActionInput as InputYaml } from "./schema.ts";
 
 export interface ActionInputOption<T> extends InputYaml {
 	parser?: InputParser<T>;

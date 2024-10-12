@@ -1,5 +1,5 @@
 import { describe, expect, test } from "vitest";
-import * as serializer from "../src/serializer";
+import * as serializer from "../src/serializer.ts";
 
 const data: {
 	name: string;

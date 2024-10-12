@@ -1,6 +1,6 @@
-import type { ActionInput } from "./input";
-import type { ActionOutput } from "./output";
-import type { ActionYml as _ActionYml } from "./schema";
+import type { ActionInput } from "./input.ts";
+import type { ActionOutput } from "./output.ts";
+import type { ActionYml as _ActionYml } from "./schema.ts";
 
 export interface ActionYml<I, O> extends _ActionYml {
 	inputs?: ActionInput<I>;

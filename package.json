@@ -18,7 +18,8 @@
     "./serializer": "./src/serializer.ts"
   },
   "files": [
-    "src"
+    "src",
+    "tsconfig.json"
   ],
   "keywords": [
     "github",

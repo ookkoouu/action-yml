@@ -1,5 +1,5 @@
 import { describe, expect, test } from "vitest";
-import * as parsers from "../src/parser";
+import * as parsers from "../src/parser.ts";
 
 const data: {
 	name: string;

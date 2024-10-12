@@ -1,14 +1,14 @@
-export { defineActionYml } from "./action";
-export { generateYaml } from "./generate";
+export { defineActionYml } from "./action.ts";
+export { generateYaml } from "./generate.ts";
 export {
 	defineInput,
 	parseInput,
-} from "./input";
+} from "./input.ts";
 export {
 	defineOutput,
 	parseOutput,
-} from "./output";
+} from "./output.ts";
 
-export type { ActionYml } from "./action";
-export type { ActionInput } from "./input";
-export type { ActionOutput } from "./output";
+export type { ActionYml } from "./action.ts";
+export type { ActionInput } from "./input.ts";
+export type { ActionOutput } from "./output.ts";

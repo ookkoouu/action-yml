@@ -1,6 +1,6 @@
 import { describe, expectTypeOf, test, vi } from "vitest";
-import { parseInput } from "../src/input";
-import { arrayP, booleanP, numberP, stringP } from "../src/parser";
+import { parseInput } from "../src/input.ts";
+import { arrayP, booleanP, numberP, stringP } from "../src/parser.ts";
 
 vi.mock("@actions/core");
 

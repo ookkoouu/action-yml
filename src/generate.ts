@@ -1,7 +1,7 @@
 import { writeFileSync } from "node:fs";
 import { stringify } from "yaml";
-import type { ActionYml } from "./action";
-import { toKebabCaseKey } from "./kebab";
+import type { ActionYml } from "./action.ts";
+import { toKebabCaseKey } from "./kebab.ts";
 
 function replacer(key: unknown, value: object) {
 	if (key === "" || typeof value !== "object") return value;
