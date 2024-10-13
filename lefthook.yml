@@ -7,12 +7,12 @@ pre-commit:
   parallel: true
   commands:
     prettier:
-      glob: "*.{md,yml,yaml}"
+      glob: "*.{json,md,yml,yaml}"
       stage_fixed: true
       run: |
         npx prettier -w {staged_files}
     biome:
-      glob: "*.{ts,json}"
+      glob: "*.{ts}"
       stage_fixed: true
       run: |
         npm run lint -- {staged_files}
