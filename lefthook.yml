@@ -8,14 +8,14 @@ pre-commit:
   commands:
     format:
       glob: "*.{json,md,yml,yaml}"
+      stage_fixed: true
       run: |
         npx prettier -w {staged_files}
-        git add {staged_files}
     lint-ts:
       glob: "*.{ts}"
+      stage_fixed: true
       run: |
         npm run lint -- {staged_files}
-        git add {staged_files}
     test:
       glob: "*.{ts}"
       run: |
