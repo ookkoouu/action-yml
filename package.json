@@ -7,6 +7,7 @@
   "scripts": {
     "check": "npm run format & npm run test",
     "format": "biome check --write",
+    "lint": "biome check --write --error-on-warnings",
     "test:run": "vitest run --typecheck",
     "test:type": "tsc --noEmit",
     "test": "npm run test:type & npm run test:run"
@@ -39,6 +40,8 @@
   "devDependencies": {
     "@biomejs/biome": "1.9.3",
     "@types/node": "22.7.5",
+    "lefthook": "1.7.18",
+    "prettier": "3.3.3",
     "typescript": "5.6.3",
     "vitest": "2.1.2"
   }

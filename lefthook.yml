@@ -1,0 +1,22 @@
+# EXAMPLE USAGE:
+#
+#   Refer for explanation to following link:
+#   https://github.com/evilmartians/lefthook/blob/master/docs/configuration.md
+
+pre-commit:
+  parallel: true
+  commands:
+    format:
+      glob: "*.{json,md,yml,yaml}"
+      run: |
+        npx prettier -w {staged_files}
+        git add {staged_files}
+    lint-ts:
+      glob: "*.{ts}"
+      run: |
+        npm run lint -- {staged_files}
+        git add {staged_files}
+    test:
+      glob: "*.{ts}"
+      run: |
+        npm run test
