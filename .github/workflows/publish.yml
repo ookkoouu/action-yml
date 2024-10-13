@@ -5,7 +5,7 @@ on:
     branches:
       - main
 
-jobs:      
+jobs:
   release-please:
     runs-on: ubuntu-latest
     outputs:

@@ -3,11 +3,13 @@
 Define & Generate `action.yml` in TS, parse typed input with it.
 
 # Install
+
 ```sh
 npm i @okou/action-yml
 ```
 
 # Example
+
 ```ts
 import { defineActionYml, generateYaml, parseInput, parseOutput } from "@okou/action-yml";
 import { arrayP, numberP, stringP } from "@okou/action-yml/parser";
