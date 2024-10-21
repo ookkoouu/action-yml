@@ -38,7 +38,7 @@
     "yaml": "2.5.1"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.9.3",
+    "@biomejs/biome": "1.9.4",
     "@types/node": "22.7.5",
     "lefthook": "1.7.18",
     "prettier": "3.3.3",
