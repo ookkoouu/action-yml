@@ -43,6 +43,6 @@
     "lefthook": "1.7.18",
     "prettier": "3.3.3",
     "typescript": "5.6.3",
-    "vitest": "2.1.2"
+    "vitest": "2.1.5"
   }
 }
